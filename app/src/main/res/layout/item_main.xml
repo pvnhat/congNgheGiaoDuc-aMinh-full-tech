@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivMale"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/voice_male"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMessage" />
+
+        <ImageView
+            android:id="@+id/ivFemale"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/voice_female"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMale" />
+
+        <ImageView
+            android:id="@+id/ivSoundMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_sound"
+            app:layout_constraintBottom_toBottomOf="@+id/ivMale"
+            app:layout_constraintStart_toEndOf="@+id/ivMale"
+            app:layout_constraintTop_toTopOf="@+id/ivMale" />
+
+        <ImageView
+            android:id="@+id/ivSoundFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_sound_female"
+            app:layout_constraintBottom_toBottomOf="@+id/ivFemale"
+            app:layout_constraintStart_toEndOf="@+id/ivFemale"
+            app:layout_constraintTop_toTopOf="@+id/ivFemale" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_message"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivSoundMale" />
+
+        <LinearLayout
+            android:id="@+id/llShape"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivSoundMale"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessage">
+
+        </LinearLayout>
+
+        <!--<com.nex3z.flowlayout.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/flowLayout"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:padding="10dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/ivSoundMale"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tvMessage">-->
+
+        <!--</com.nex3z.flowlayout.FlowLayout>-->
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
